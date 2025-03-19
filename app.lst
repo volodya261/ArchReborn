@@ -1,4 +1,3 @@
-# System 
 pipewire
 pipewire-alsa
 pipewire-audio
@@ -16,7 +15,6 @@ blueman
 brightnessctl
 udiskie
 amd-ucode
-
 mesa
 lib32-mesa 
 vulkan-radeon 
@@ -26,7 +24,6 @@ lib32-libva-mesa-driver
 vulkan-mesa-layers 
 opencl-rusticl-mesa 
 lib32-opencl-rusticl-mesa
-# WM
 qt5-quickcontrols
 qt5-quickcontrols2
 qt5-graphicaleffects
@@ -54,9 +51,8 @@ qt5-wayland
 qt6-wayland
 xdg-desktop-portal-gtk
 ttf-liberation
-
-# APP
 obsidian
+timeshift
 firefox
 kitty
 thunar

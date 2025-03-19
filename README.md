@@ -3,4 +3,7 @@
 - [ ] Auto Settings post install (on any system) 
     - [ ] Install pkgs
     - [ ] Settings environment (terminal, shell, gui ...) 
+    
+    - [ ] Settings WM
+    	- [ ] start gnome-polkit
 ---
