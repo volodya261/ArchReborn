@@ -15,6 +15,7 @@ blueman
 brightnessctl
 udiskie
 amd-ucode
+grub-btrfs
 mesa
 lib32-mesa 
 vulkan-radeon 
