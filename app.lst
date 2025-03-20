@@ -51,6 +51,7 @@ qt5-wayland
 qt6-wayland
 xdg-desktop-portal-gtk
 ttf-liberation
+waybar
 obsidian
 timeshift
 firefox
