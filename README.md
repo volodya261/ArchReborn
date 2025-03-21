@@ -3,7 +3,7 @@
 - [ ] Auto Settings post install (on any system)
   - [x] Install pkgs (and aur)
   - [x] Settings environment (terminal, shell, gui ...)
-  - [ ] auto start service post install
+  - [x] auto start service post install
   - [ ] install auto settings virt-manager
   - [ ] settings fish and neovim 
       

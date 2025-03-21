@@ -58,6 +58,7 @@ qt6-wayland
 xdg-desktop-portal-gtk
 ttf-liberation
 waybar
+cliphist
 
 #WORK
 docker
