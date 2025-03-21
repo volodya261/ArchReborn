@@ -48,7 +48,6 @@ ttf-nerd-fonts-symbols
 noto-fonts-emoji
 nwg-look
 sddm
-lact
 qt5ct
 qt6ct
 kvantum
@@ -85,7 +84,6 @@ fish
 fastfetch
 qbittorrent
 obs-studio
-steam 
 slurp
 grim
 wl-clipboard

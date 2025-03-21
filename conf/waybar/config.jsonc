@@ -5,7 +5,7 @@
     ],
     "modules-left": [
       "custom/cpuinfo",
-      "memory"
+      "custom/mem"
     ],
     "modules-right": [
       "hyprland/language",
@@ -60,9 +60,17 @@
       "special-visible-only": true
     },
     "layer": "bottom",
-    "memory": {
-      "format": "  {}% "
+    
+
+    "custom/mem": {
+       "format": "  {} ",
+       "interval": 5,
+       "exec": "free -h | awk '/Mem:/{printf $3}'",
+       "tooltip": false
+    
     },
+
+
     "pulseaudio": {
       "format": "{icon} {volume}%",
       "format-bluetooth": "{icon} {volume}% ",
