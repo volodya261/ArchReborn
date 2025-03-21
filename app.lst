@@ -13,6 +13,8 @@ bluez
 bluez-utils
 blueman
 brightnessctl
+lm-sensors
+jq
 udiskie
 amd-ucode
 grub-btrfs
@@ -20,7 +22,7 @@ mesa
 lib32-mesa 
 vulkan-radeon 
 lib32-vulkan-radeon 
-libva-mesa-driver 
+libva-mesa-driver
 lib32-libva-mesa-driver 
 vulkan-mesa-layers 
 opencl-rusticl-mesa 
@@ -45,6 +47,8 @@ xorg-xhost
 ttf-nerd-fonts-symbols
 noto-fonts-emoji
 nwg-look
+sddm
+lact
 qt5ct
 qt6ct
 kvantum
@@ -59,6 +63,8 @@ timeshift
 firefox
 kitty
 thunar
+thunar-archive-plugin 
+thunar-volman
 gvfs
 file-roller
 vim
@@ -72,3 +78,4 @@ slurp
 grim
 wl-clipboard
 satty
+

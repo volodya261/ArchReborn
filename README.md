@@ -2,9 +2,11 @@
 
 - [ ] Auto Settings post install (on any system)
   - [x] Install pkgs (and aur)
-  - [ ] Settings environment (terminal, shell, gui ...)
+  - [x] Settings environment (terminal, shell, gui ...)
+  - [ ] auto start service post install
 
-  - [ ] Settings WM
-    - [ ] start gnome-polkit
+  - [x] Settings WM
+    - [x] start gnome-polkit
+      
 
 ---
