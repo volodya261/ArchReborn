@@ -60,6 +60,8 @@ waybar
 cliphist
 earlyoom
 util-linux
+fzf
+eza
 
 docker
 docker-compose
