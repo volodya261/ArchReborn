@@ -4,9 +4,8 @@
   - [x] Install pkgs (and aur)
   - [x] Settings environment (terminal, shell, gui ...)
   - [ ] auto start service post install
-
-  - [x] Settings WM
-    - [x] start gnome-polkit
+  - [ ] install auto settings virt-manager
+  - [ ] settings fish and neovim 
       
 
 ---

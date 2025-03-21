@@ -58,6 +58,13 @@ qt6-wayland
 xdg-desktop-portal-gtk
 ttf-liberation
 waybar
+
+#WORK
+docker
+docker-compose
+docker-buildx
+
+#APP
 obsidian
 timeshift
 firefox
