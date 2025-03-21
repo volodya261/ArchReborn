@@ -1,7 +1,7 @@
 import subprocess
 
 # Список скриптов для выполнения
-SCRIPTS = ["install_app.py", "manage_services.py"]
+SCRIPTS = ["install_app.py", "start_services.py"]
 
 def run_script(script_name):
     """Запускает указанный скрипт."""

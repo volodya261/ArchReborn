@@ -59,11 +59,15 @@ xdg-desktop-portal-gtk
 ttf-liberation
 waybar
 cliphist
+earlyoom
 
 #WORK
 docker
 docker-compose
 docker-buildx
+virt-manager 
+libvirt
+qemu-base
 
 #APP
 obsidian

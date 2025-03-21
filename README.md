@@ -4,8 +4,8 @@
   - [x] Install pkgs (and aur)
   - [x] Settings environment (terminal, shell, gui ...)
   - [x] auto start service post install
-  - [ ] install auto settings virt-manager
+  - [x] install auto settings virt-manager
   - [ ] settings fish and neovim 
-      
+  - [ ] settings Rofi style windows    
 
 ---

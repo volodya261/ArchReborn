@@ -1,7 +1,13 @@
 import subprocess
 
 # Список сервисов для включения и запуска
-SERVICES = ["NetworkManager", "bluetooth"]
+SERVICES = ["NetworkManager", 
+            "bluetooth", 
+            "libvirtd.socket", 
+            "earlyoom",
+            "laptop-mode.service",
+            "sddm"
+            ]
 
 def manage_service(service_name, action):
     """Управляет сервисами systemd (start, enable, restart, stop)."""
