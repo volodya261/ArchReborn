@@ -15,4 +15,5 @@ alias lt='eza --icons=auto --tree' # list folder as tree
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 abbr mkdir 'mkdir -p'
 
-fish_config theme choose Lava
+fish_config theme choose Dracula
+
