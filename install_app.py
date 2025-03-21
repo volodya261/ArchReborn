@@ -70,7 +70,6 @@ def configure_pacman():
     subprocess.run(["sudo", "mv", temp_file, pacman_conf], check=True)
     print("Файл pacman.conf обновлен!")
 
-# Установка пакетов из списка
 def install_packages(package_file, package_manager):
     if not os.path.exists(package_file):
         print(f"Файл {package_file} не найден, пропускаю установку.")
@@ -95,7 +94,6 @@ def install_packages(package_file, package_manager):
     print(", ".join(packages))
     subprocess.run(shlex.split(cmd), check=True)
 
-# Основная логика скрипта
 if __name__ == "__main__":
     # Настройка pacman.conf
     configure_pacman()
