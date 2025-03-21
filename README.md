@@ -5,7 +5,7 @@
   - [x] Settings environment (terminal, shell, gui ...)
   - [x] auto start service post install
   - [x] install auto settings virt-manager
-  - [ ] settings fish and neovim 
+  - [ ] settings fish and neovim starship 
   - [ ] settings Rofi style windows    
 
 ---

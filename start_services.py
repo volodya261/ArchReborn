@@ -5,7 +5,10 @@ SERVICES = ["NetworkManager",
             "libvirtd.socket", 
             "earlyoom",
             "laptop-mode.service",
-            "sddm"
+            "sddm",
+            "grub-btrfsd",
+            "fstrim.service",
+            "fstrim.timer"
             ]
 
 def manage_service(service_name, action):

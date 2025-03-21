@@ -13,8 +13,8 @@ bluez
 bluez-utils
 blueman
 brightnessctl
-lm-sensors
 jq
+lm_sensors
 udiskie
 amd-ucode
 grub-btrfs
@@ -59,18 +59,19 @@ ttf-liberation
 waybar
 cliphist
 earlyoom
+util-linux
 
-#WORK
 docker
 docker-compose
 docker-buildx
 virt-manager 
 libvirt
 qemu-base
+starship
 
-#APP
 obsidian
 timeshift
+inotify-tools
 firefox
 kitty
 thunar
