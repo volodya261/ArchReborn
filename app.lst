@@ -62,6 +62,9 @@ earlyoom
 util-linux
 fzf
 eza
+netcat
+vinagre #rdp_client
+gedit
 
 docker
 docker-compose

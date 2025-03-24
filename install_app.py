@@ -38,7 +38,6 @@ def setup_yay():
 def configure_pacman():
     print("Настройка pacman.conf...")
 
-    # Читаем текущий конфиг
     with open(pacman_conf, "r") as f:
         lines = f.readlines()
 
@@ -62,7 +61,6 @@ def configure_pacman():
     if not parallel_found:
         modified_lines.append("\nParallelDownloads = 5\n")
 
-    # Записываем изменения с правами root
     temp_file = "/tmp/pacman.conf"
     with open(temp_file, "w") as f:
         f.writelines(modified_lines)
@@ -70,14 +68,23 @@ def configure_pacman():
     subprocess.run(["sudo", "mv", temp_file, pacman_conf], check=True)
     print("Файл pacman.conf обновлен!")
 
-def install_packages(package_file, package_manager):
+# Функция для чтения пакетов с игнорированием комментариев
+def read_packages(package_file):
     if not os.path.exists(package_file):
         print(f"Файл {package_file} не найден, пропускаю установку.")
-        return
+        return []
 
+    packages = []
     with open(package_file, "r") as f:
-        packages = [line.strip() for line in f if line.strip() and not line.startswith("#")]
+        for line in f:
+            clean_line = line.split("#")[0].strip()  # Удаляем комментарий и пробелы
+            if clean_line:  # Добавляем только непустые строки
+                packages.append(clean_line)
+    return packages
 
+# Функция установки пакетов
+def install_packages(package_file, package_manager):
+    packages = read_packages(package_file)
     if not packages:
         print(f"Нет пакетов для установки из {package_file}.")
         return
@@ -95,20 +102,13 @@ def install_packages(package_file, package_manager):
     subprocess.run(shlex.split(cmd), check=True)
 
 if __name__ == "__main__":
-    # Настройка pacman.conf
     configure_pacman()
 
-    # Обновление системы
     print("Обновление системы...")
     subprocess.run(["sudo", "pacman", "-Syyu", "--noconfirm"], check=True)
 
-    # Установка пакетов из официальных репозиториев
     install_packages(pacman_list, "pacman")
-
-    # Установка yay (если не установлен)
     setup_yay()
-
-    # Установка пакетов из AUR
     install_packages(aur_list, "yay")
 
     print("Все пакеты установлены!")
