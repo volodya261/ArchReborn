@@ -74,6 +74,7 @@ libvirt
 qemu-base
 starship
 freerdp
+neovim
 
 remmina
 obsidian
