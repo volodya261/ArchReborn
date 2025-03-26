@@ -65,6 +65,7 @@ eza
 netcat
 vinagre #rdp_client
 gedit
+dnsmasq #for virt-manager
 
 docker
 docker-compose
