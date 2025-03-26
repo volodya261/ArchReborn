@@ -1,3 +1,7 @@
 import shutil
+import os
 
-copy_folder = shutil.copytree('./conf', '', dirs_exist_ok=True)
+src_dir = 'conf'
+dest_dir = os.path.join(os.environ['HOME'], '.config') 
+
+shutil.copytree(src_dir, dest_dir, dirs_exist_ok=True) 
