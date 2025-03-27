@@ -66,6 +66,7 @@ netcat
 vinagre #rdp_client
 gedit
 dnsmasq #for virt-manager
+thermald #power settings
 
 docker
 docker-compose
