@@ -9,13 +9,15 @@ ExecStart=/usr/bin/grub-btrfsd --syslog --timeshift-auto
 ```
 
 
-- [ ] Auto Settings post install (on any system)
+- [x] Auto Settings post install (on any system)
   - [x] Install pkgs (and aur)
   - [x] Settings environment (terminal, shell, gui ...)
   - [x] auto start service post install
   - [x] install auto settings virt-manager
   - [x] settings fish and neovim starship 
-  - [ ] settings Rofi style windows    
+  - [x] settings Rofi style windows    
 
+- [ ] Other
+  - [ ] Install and setting python-fabric (widget)
 ---
 
