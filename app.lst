@@ -68,6 +68,7 @@ gedit
 dnsmasq #for virt-manager
 tlp
 tlp-rdw
+unzip
 
 docker
 docker-compose
