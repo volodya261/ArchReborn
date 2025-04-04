@@ -1,4 +1,9 @@
 return {
+ {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = true
+ },
 
  { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
 

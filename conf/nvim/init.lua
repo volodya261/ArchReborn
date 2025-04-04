@@ -1,8 +1,5 @@
 require("config.lazy")
-
-vim.g.mapleader = " "
-vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
+require("vim-options")
 
 -- telescope
 local builtin = require('telescope.builtin')
@@ -13,10 +10,8 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live gr
 require'nvim-treesitter.configs'.setup {
   ensure_installed = { "lua","markdown", "python", "bash"},
   auto_install = true,
-  ignore_install = { "javascript" },
   highlight = {
     enable = true,
-    disable = { "c", "rust" },
     additional_vim_regex_highlighting = false,
   },
   ident = { enable = true },
