@@ -19,3 +19,6 @@ require'nvim-treesitter.configs'.setup {
 
 -- NeoTree
 vim.keymap.set('n', '<leader>e', ':Neotree filesystem reveal left<CR>')
+-- Window split
+vim.keymap.set('n', '<leader>vs', ':vsp <CR>')
+vim.keymap.set('n', '<leader>vp', ':sp <CR>')
