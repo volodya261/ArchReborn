@@ -23,6 +23,15 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities
       })
+      lspconfig.markdown_oxide.setup({
+        capabilities = capabilities
+      })
+      lspconfig.basedpyright.setup({
+        capabilities = capabilities
+      })
+      lspconfig.bashls.setup({
+        capabilities = capabilities
+      })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})

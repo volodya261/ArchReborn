@@ -14,6 +14,7 @@ bluez-utils
 blueman
 brightnessctl
 jq
+npm
 ripgrep
 lm_sensors
 udiskie
