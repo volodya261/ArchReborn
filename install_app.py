@@ -8,13 +8,20 @@ pacman_conf = "/etc/pacman.conf"
 pacman_list = "app.lst"
 aur_list = "aur.lst"
 
+
 # Проверка, установлен ли yay
 def is_yay_installed():
     try:
-        subprocess.run(["yay", "--version"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+        subprocess.run(
+            ["yay", "--version"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=True,
+        )
         return True
     except (subprocess.CalledProcessError, FileNotFoundError):
         return False
+
 
 # Установка yay, если он не установлен
 def setup_yay():
@@ -34,6 +41,7 @@ def setup_yay():
     print("yay успешно установлен!")
     subprocess.run(["rm", "-rf", local_dir])
 
+
 # Настройка pacman.conf (с sudo)
 def configure_pacman():
     print("Настройка pacman.conf...")
@@ -52,7 +60,9 @@ def configure_pacman():
         elif multilib_found and line.strip() == "#Include = /etc/pacman.d/mirrorlist":
             modified_lines.append("Include = /etc/pacman.d/mirrorlist\n")
             multilib_found = False
-        elif line.startswith("#ParallelDownloads") or re.match(r"^ParallelDownloads\s*=\s*\d+", line):
+        elif line.startswith("#ParallelDownloads") or re.match(
+            r"^ParallelDownloads\s*=\s*\d+", line
+        ):
             modified_lines.append("ParallelDownloads = 5\n")
             parallel_found = True
         else:
@@ -68,6 +78,7 @@ def configure_pacman():
     subprocess.run(["sudo", "mv", temp_file, pacman_conf], check=True)
     print("Файл pacman.conf обновлен!")
 
+
 # Функция для чтения пакетов с игнорированием комментариев
 def read_packages(package_file):
     if not os.path.exists(package_file):
@@ -81,6 +92,7 @@ def read_packages(package_file):
             if clean_line:  # Добавляем только непустые строки
                 packages.append(clean_line)
     return packages
+
 
 # Функция установки пакетов
 def install_packages(package_file, package_manager):
@@ -97,9 +109,12 @@ def install_packages(package_file, package_manager):
         print(f"Неизвестный пакетный менеджер: {package_manager}")
         return
 
-    print(f"Устанавливаю {len(packages)} пакетов из {package_file} с помощью {package_manager}:")
+    print(
+        f"Устанавливаю {len(packages)} пакетов из {package_file} с помощью {package_manager}:"
+    )
     print(", ".join(packages))
     subprocess.run(shlex.split(cmd), check=True)
+
 
 if __name__ == "__main__":
     configure_pacman()
@@ -112,4 +127,3 @@ if __name__ == "__main__":
     install_packages(aur_list, "yay")
 
     print("Все пакеты установлены!")
-

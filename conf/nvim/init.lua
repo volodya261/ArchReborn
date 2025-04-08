@@ -22,3 +22,6 @@ vim.keymap.set('n', '<leader>e', ':Neotree filesystem reveal left<CR>')
 -- Window split
 vim.keymap.set('n', '<leader>vs', ':vsp <CR>')
 vim.keymap.set('n', '<leader>vp', ':sp <CR>')
+
+-- bufferline
+vim.keymap.set('n', '<leader>bd', ':bd <CR>')

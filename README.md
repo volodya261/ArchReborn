@@ -18,6 +18,7 @@ ExecStart=/usr/bin/grub-btrfsd --syslog --timeshift-auto
   - [x] settings Rofi style windows    
 
 - [ ] Other
-  - [ ] Install and setting python-fabric (widget)
+  - [ ] Waybar - add app button
+  - [ ] 
 ---
 
