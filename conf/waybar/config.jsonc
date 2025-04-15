@@ -5,7 +5,8 @@
     ],
     "modules-left": [
       "custom/cpuinfo",
-      "custom/mem"
+      "custom/mem",
+      "idle_inhibitor"
     ],
     "modules-right": [
       "hyprland/language",
@@ -16,6 +17,17 @@
       "tray"
     ],
     "position": "top",
+    "layer": "bottom",
+    "output": "eDP-1",
+
+    "idle_inhibitor": {
+        "format": "  {icon}",
+        "format-icons": {
+            "activated": "󰅶 ",
+            "deactivated": "󰛊 ",
+        },
+     },
+
 
     "battery": {
       "format": "{icon} {capacity}%",
@@ -54,12 +66,11 @@
       "tooltip": false
     },
     "hyprland/workspaces": {
-      "all-outputs": false,
+      "all-outputs": true,
       "disable-scroll": true,
       "show-special": true,
       "special-visible-only": true
     },
-    "layer": "bottom",
     
 
     "custom/mem": {
