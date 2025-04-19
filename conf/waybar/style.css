@@ -3,7 +3,6 @@
   border-radius: 0px;
   font-family: "JetBrains Mono";
   font-weight: bold;
-  font-size: 14px;
   min-height: 0;
   color: #ebdbb2;
 }
@@ -13,15 +12,15 @@ window#waybar {
 }
 
 /* Workspace Buttons */
+ 
 #workspaces button label{
   color: #ebdbb2;
-  padding: 0 6px;
 }
 #workspaces button.active label {
   color: #1d2021;
 }
 #workspaces button.active {
-  background: #bd7f2f;
+  background: #a89984;
 }
 
 
@@ -41,7 +40,6 @@ window#waybar {
 }
 
 #pulseaudio.muted {
-  padding: 0 20px;
   color: #cc241d;
 }
 

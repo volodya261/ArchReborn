@@ -19,7 +19,6 @@
     "position": "top",
     "layer": "bottom",
     "output": "eDP-1",
-
     "idle_inhibitor": {
         "format": "  {icon}",
         "format-icons": {
@@ -70,6 +69,7 @@
       "disable-scroll": true,
       "show-special": true,
       "special-visible-only": true
+
     },
     
 
