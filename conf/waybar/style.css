@@ -13,6 +13,10 @@ window#waybar {
 
 /* Workspace Buttons */
  
+#workspaces button {
+  border-radius: 8px;
+}
+
 #workspaces button label{
   color: #ebdbb2;
 }
