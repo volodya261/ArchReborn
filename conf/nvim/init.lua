@@ -25,8 +25,11 @@ vim.keymap.set('n', '<leader>vp', ':sp <CR>')
 
 -- bufferline
 vim.keymap.set('n', '<leader>bd', ':bd! <CR>')
+vim.keymap.set('n','<leader>bn', ':BufferLineCycleNext <CR>')
+vim.keymap.set('n','<leader>bp', ':BufferLineCyclePrev <CR>')
 -- comment example
 vim.keymap.set('n', '<leader>bc', ':1,10s/^/#/')
 --terminal
 vim.keymap.set('n', '<leader>tt', ':sp term://fish <CR>')
 vim.keymap.set('t', '<leader>te', [[<C-\><C-n>]], { noremap = true, silent = true })
+
