@@ -17,8 +17,5 @@ ExecStart=/usr/bin/grub-btrfsd --syslog --timeshift-auto
   - [x] settings fish and neovim starship 
   - [x] settings Rofi style windows    
 
-- [ ] Other
-  - [ ] Waybar - add app button
-  - [ ] 
 ---
 
