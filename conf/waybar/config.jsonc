@@ -7,7 +7,6 @@
       "custom/cpuinfo",
       "custom/mem",
       "idle_inhibitor",
-      "hyprland/language",
     ],
     "modules-right": [
       "custom/play",
@@ -15,7 +14,8 @@
       "backlight",
       "clock",
       "battery",
-      "tray"
+      "tray",
+      "hyprland/language",
     ],
     "position": "top",
     "layer": "bottom",

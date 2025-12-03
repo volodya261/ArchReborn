@@ -34,7 +34,7 @@ window#waybar {
   color: #0fcc33;
 }
 
-#backlight, #cpuinfo, #memory, #battery, #tray, #language, #custom-play{
+#backlight, #cpuinfo, #memory, #battery, #custom-play{
   padding: 0 4px;
   margin: 0 6px;
 }
