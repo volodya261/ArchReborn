@@ -6,7 +6,8 @@
     "modules-left": [
       "custom/cpuinfo",
       "custom/mem",
-      "idle_inhibitor"
+      "idle_inhibitor",
+      "custom/play"
     ],
     "modules-right": [
       "hyprland/language",
@@ -26,7 +27,16 @@
             "deactivated": "󰛊 ",
         },
      },
-
+    "custom/play": {
+        "format": "   {}",
+				"exec": "playerctl metadata title | awk '{print $1}'",
+        "on-click": "playerctl play-pause ",
+        "on-click-right": "playerctl next ",
+        "on-click-middle": "playerctl previous",
+        "escape": true,
+				"interval": 2,
+        "tooltip": true,
+    },
 
     "battery": {
       "format": "{icon} {capacity}%",
@@ -70,13 +80,12 @@
     "custom/cpuinfo": {
       "exec": "$HOME/.config/waybar/cpuinfo.sh",
       "format": " {}",
-      "interval": 5,
+      "interval": 15,
       "max-length": 1000,
       "return-type": "json",
       "rotate": 0,
       "tooltip": true
     },
-    "height": 24,
     "hyprland/language": {
       "format-en": "🇺🇸",
       "format-ru": "🇷🇺",
@@ -88,7 +97,6 @@
       "disable-scroll": true,
       "show-special": true,
       "special-visible-only": true
-
     },
     
 
