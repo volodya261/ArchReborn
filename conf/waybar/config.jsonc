@@ -7,9 +7,9 @@
       "custom/cpuinfo",
       "custom/mem",
       "idle_inhibitor",
-      "custom/play"
     ],
     "modules-right": [
+      "custom/play",
       "hyprland/language",
       "backlight",
       "pulseaudio",
