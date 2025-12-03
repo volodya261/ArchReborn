@@ -34,9 +34,9 @@ window#waybar {
   color: #0fcc33;
 }
 
-#cpuinfo #memory #clock, #battery, #pulseaudio, #tray, #language #custom-play{
-  padding: 0 10px;
-  margin: 0 10px;
+#backlight, #cpuinfo, #memory, #battery, #tray, #language, #custom-play{
+  padding: 0 4px;
+  margin: 0 6px;
 }
 
 #language {
@@ -60,6 +60,7 @@ window#waybar {
 
 #clock {
   margin: 0;
+  padding: 1px 5px;
   color: #b16286;
 }
 

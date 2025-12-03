@@ -7,14 +7,14 @@
       "custom/cpuinfo",
       "custom/mem",
       "idle_inhibitor",
+      "hyprland/language",
     ],
     "modules-right": [
       "custom/play",
-      "hyprland/language",
-      "backlight",
       "pulseaudio",
-      "battery",
+      "backlight",
       "clock",
+      "battery",
       "tray"
     ],
     "position": "top",
