@@ -1,0 +1,139 @@
+[
+  {
+    "modules-center": [
+      "hyprland/workspaces"
+    ],
+    "modules-left": [
+      "custom/cpuinfo",
+      "custom/mem",
+      "idle_inhibitor",
+    ],
+    "modules-right": [
+      "custom/play",
+      "pulseaudio",
+      "backlight",
+      "clock",
+      "battery",
+      "tray",
+      "hyprland/language",
+    ],
+    "position": "top",
+    "layer": "bottom",
+    "output": "eDP-1",
+    "idle_inhibitor": {
+        "format": "  {icon}",
+        "format-icons": {
+            "activated": "󰅶 ",
+            "deactivated": "󰛊 ",
+        },
+     },
+    "custom/play": {
+        "format": "   {}",
+				"exec": "playerctl metadata title | awk '{print $1}'",
+        "on-click": "playerctl play-pause ",
+        "on-click-right": "playerctl next ",
+        "on-click-middle": "playerctl previous",
+        "escape": true,
+				"interval": 2,
+        "tooltip": true,
+    },
+
+    "battery": {
+      "format": "{icon} {capacity}%",
+      "format-alt": "{time} {icon}",
+      "format-charging": " {capacity}%",
+      "format-icons": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "states": {
+        "critical": 1,
+        "warning": 30
+      }
+    },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A %d.%m}",
+    "tooltip-format": "<tt><big>{calendar}</big></tt>",
+    "calendar": {
+      "mode": "month",
+      "on-scroll": 1,
+      "format": {
+        "months":   "<span color='#ffead3'><b>{}</b></span>",
+        "days":     "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks":    "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today":    "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up":   "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+
+    "custom/cpuinfo": {
+      "exec": "$HOME/.config/waybar/cpuinfo.sh",
+      "format": " {}",
+      "interval": 15,
+      "max-length": 1000,
+      "return-type": "json",
+      "rotate": 0,
+      "tooltip": true
+    },
+    "hyprland/language": {
+      "format-en": "🇺🇸",
+      "format-ru": "🇷🇺",
+      "min-length": 5,
+      "tooltip": false
+    },
+    "hyprland/workspaces": {
+      "all-outputs": true,
+      "disable-scroll": true,
+      "show-special": true,
+      "special-visible-only": true
+    },
+    
+
+    "custom/mem": {
+       "format": "  {} ",
+       "interval": 5,
+       "exec": "free -h | awk '/Mem:/{printf $3}'",
+       "tooltip": false
+    
+    },
+
+
+    "pulseaudio": {
+      "format": "{icon} {volume}%",
+      "format-bluetooth": "{icon} {volume}% ",
+      "format-icons": {
+        "car": "",
+        "default": [
+          "",
+          ""
+        ],
+        "handsfree": "",
+        "headphones": "",
+        "headset": "",
+        "phone": "",
+        "portable": ""
+      },
+      "format-muted": "",
+      "on-click": "pavucontrol"
+    },
+    "tray": {
+      "icon-size": 14,
+      "spacing": 1
+    },
+    "backlight": {
+    	"format": "{percent}% {icon} ",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    }
+  }
+]
