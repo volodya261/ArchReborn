@@ -21,7 +21,6 @@ SERVICES = [
     "earlyoom",
     "laptop-mode.service",
     "sddm",
-    "grub-btrfsd",
     "fstrim.service",
     "fstrim.timer"
 ]
