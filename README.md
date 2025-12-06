@@ -2,6 +2,8 @@
 
 - Post install
 
+Скопировать .dotfiles в home перейти в каталог и запустить 'stow .'
+
 - Для добавления снапшотов в grub
 ```
 sudo systemctl edit --full grub-btrfsd

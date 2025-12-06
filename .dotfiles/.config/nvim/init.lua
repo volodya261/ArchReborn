@@ -25,8 +25,8 @@ vim.keymap.set('n', '<leader>vp', ':sp <CR>')
 
 -- bufferline
 vim.keymap.set('n', '<leader>q', ':bd! <CR>')
-vim.keymap.set('n','<leader>d', ':BufferLineCycleNext <CR>')
-vim.keymap.set('n','<leader>a', ':BufferLineCyclePrev <CR>')
+vim.keymap.set('n','<leader>l', ':BufferLineCycleNext <CR>')
+vim.keymap.set('n','<leader>h', ':BufferLineCyclePrev <CR>')
 -- comment example
 vim.keymap.set('n', '<leader>bc', ':1,10s/^/#/')
 --terminal
