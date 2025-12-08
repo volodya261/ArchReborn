@@ -18,6 +18,6 @@ ExecStart=/usr/bin/grub-btrfsd --syslog --timeshift-auto
   - [x] install auto settings virt-manager
   - [x] settings fish and neovim starship 
   - [x] settings Rofi style windows    
-
+  - [ ] Уведомление при смене языков
 ---
 
