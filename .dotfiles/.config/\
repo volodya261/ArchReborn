@@ -1,0 +1,31 @@
+#!/usr/bin/bash
+# ~/.config/hypr/switch-layout.sh
+
+KEYBOARDS=(
+    "company--usb-device---keyboard"
+    "at-translated-set-2-keyboard"
+)
+
+# 1. Переключаем каждую клавиатуру отдельно
+for kb in "${KEYBOARDS[@]}"; do
+    hyprctl switchxkblayout "$kb" next >/dev/null 2>&1 || true
+done
+
+# 2. Ждём чуть-чуть, чтобы Hyprland успел обновить active_keymap
+sleep 0.15   # 50 миллисекунд — этого достаточно и незаметно глазу
+
+# 3. Теперь точно читаем актуальную раскладку
+current_name=$(hyprctl devices -j | jq -r '.keyboards[0].active_keymap')
+
+case "$current_name" in
+    *English*)  icon="EN" ;;
+    *Russian*)  icon="RU" ;;
+    *Ukrainian*) icon="UA" ;;
+    *)          icon="${current_name:0:2}" ;;
+esac
+
+# 4. OSD только на активном мониторе
+monitor=$(hyprctl activeworkspace -j | jq -r '.monitor')
+
+swayosd-client \
+    --custom-message "󰌌 $icon" \
