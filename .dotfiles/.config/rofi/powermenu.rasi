@@ -1,0 +1,63 @@
+* {
+    /* Gruvbox Palette */
+    bg:          #282828e6;
+    fg:          #ebdbb2;
+    accent:      #fe8019E6;
+    
+    background-color:   transparent;
+    text-color:         @fg;
+    font:               "JetBrainsMono Nerd Font 32";
+}
+
+window {
+    transparency:       "real";
+    background-color:   @bg;
+    border-radius:      100px;
+    /* Увеличим ширину, чтобы точно влезло 5 иконок с отступами */
+    width:              600px;
+    location:           center;
+    anchor:             center;
+}
+
+mainbox {
+    children:           [ listview ];
+    padding:            15px 25px; /* Увеличим боковые отступы внутри окна */
+}
+
+listview {
+    layout:             horizontal;
+    spacing:            20px;
+    columns:            5;
+    fixed-columns:      true; /* Критически важно для сетки в один ряд */
+    fixed-height:       true;
+}
+
+element {
+    /* Задаем фиксированный квадрат для элемента */
+    width:              85px;
+    height:             85px;
+    border-radius:      100%;
+    cursor:             pointer;
+    
+    /* Центрируем содержимое внутри элемента */
+    orientation:        horizontal;
+}
+
+element selected {
+    background-color:   @accent;
+    text-color:         @bg;
+}
+
+element-text {
+    /* Центрируем иконку точно по середине круга */
+    vertical-align:     0.5;
+    horizontal-align:   0.5;
+    cursor:             inherit;
+    /* Убираем любые ограничения по ширине текста внутри */
+    expand:             true;
+}
+
+/* Отключаем всё лишнее, что может занимать место */
+element-icon, inputbar, prompt, entry, textbox-prompt-colon, message {
+    enabled:            false;
+}

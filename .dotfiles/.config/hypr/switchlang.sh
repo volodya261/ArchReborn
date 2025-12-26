@@ -2,9 +2,12 @@
 # ~/.config/hypr/switch-layout.sh
 
 KEYBOARDS=(
+    "logitech-usb-keyboard"
+    "logitech-usb-keyboard-consumer-control"
     "at-translated-set-2-keyboard"
     "company--usb-device---keyboard"
 )
+
 
 # Используем первую активную клавиатуру из списка
 ACTIVE_KEYBOARD="${KEYBOARDS[0]}"
@@ -19,9 +22,6 @@ fi
 
 # Показываем текущую раскладку
 case "$current_name" in
-    *English*|*US*)  icon="EN" ;;
-    *Russian*)       icon="RU" ;;
-    *Ukrainian*)     icon="UA" ;;
     *)               icon="${current_name:0:2}" ;;
 esac
 

@@ -9,6 +9,5 @@
     fg-col2: #ff9800;
     grey: #5c5f77;   
     teal: #b0885e;     
-    width: 900;
     border-radius: 10px;
 }

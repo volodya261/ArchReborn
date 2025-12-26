@@ -2,16 +2,21 @@
   border: none;
   font-family: "JetBrains Mono";
   font-weight: bold;
-  min-height: 0;
+  min-height: 5px;
   color: #ebdbb2;
+  border-radius: 50px;
 }
 
 window#waybar {
-  background: rgba(17, 17, 17, 0.5); /* 0.5 — степень прозрачности (от 0 до 1) */
+  background: rgba(17, 17, 17, 0.6); /* 0.5 — степень прозрачности (от 0 до 1) */
 }
 
 /* Workspace Buttons */
- 
+
+#workspaces {
+
+}
+
 #workspaces button {
   padding: 3 6px;
   margin: 2;
@@ -34,9 +39,9 @@ window#waybar {
   color: #0fcc33;
 }
 
-#backlight, #cpuinfo, #memory, #battery, #custom-play{
-  padding: 0 4px;
-  margin: 0 6px;
+#cpuinfo, #memory{
+  padding: 0 10px;
+  margin: 0 10px;
 }
 
 #language {
@@ -59,12 +64,14 @@ window#waybar {
 }
 
 #clock {
-  margin: 0;
-  padding: 1px 5px;
   color: #b16286;
 }
 
 #tray {
   margin: 0;
   color: #d65d0e;
+}
+
+#battery, #backlight,#custom-play,#pulseaudio,#clock{
+  padding: 0 5px;
 }
