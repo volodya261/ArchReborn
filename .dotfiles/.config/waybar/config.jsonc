@@ -1,5 +1,5 @@
   {
-    "output": "eDP-1",
+  //  "output": "eDP-1",
     "position": "bottom",
     "width": 1900,
     //"height": 20,
@@ -15,8 +15,8 @@
       "custom/play",
       "pulseaudio",
       "backlight",
-      "clock",
       "battery",
+      "clock",
       "tray",
       "hyprland/language",
     ],

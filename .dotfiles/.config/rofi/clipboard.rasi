@@ -26,19 +26,6 @@ mainbox {
     children:           [ inputbar, listview ];
 }
 
-/* Строка поиска с иконкой 📋 */
-inputbar {
-    margin:             0px 0px 10px 0px;
-    padding:            5px;
-    children:           [ prompt, entry ];
-}
-
-prompt {
-    content:            "📋";
-    padding:            0px 10px 0px 5px;
-    text-color:         @accent;
-}
-
 entry {
     placeholder:        "Поиск в буфере...";
     placeholder-color:  #fbf1c780;

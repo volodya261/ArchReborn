@@ -4,7 +4,6 @@
   font-weight: bold;
   min-height: 5px;
   color: #ebdbb2;
-  border-radius: 50px;
 }
 
 window#waybar {
@@ -44,13 +43,34 @@ window#waybar {
   margin: 0 10px;
 }
 
-#language {
+#tray {
+  background-color: rgba(60, 70, 50, 0.4);
   margin: 0;
-  color: #d79921;
+  color: #d65d0e;
+  padding: 0 10px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 4px 0; /* Убираем боковые отступы, чтобы они слиплись */
 }
 
+#language {
+    border-radius: 0 5px 5px 0;
+}
+
+/* Общие свойства для всех элементов группы */
+#pulseaudio, #backlight, #battery, #clock {
+  background-color: rgba(60, 70, 50, 0.3);
+  padding: 0 10px;
+  margin: 4px 0; /* Убираем боковые отступы, чтобы они слиплись */
+}
+
+#battery {
+  color: #458588;
+}
+
+/* Скругление только слева у первого модуля (например, Звук) */
 #pulseaudio {
-  margin: 0;
+  border-radius: 5px 0 0 5px;
+  margin-left: 5px;
   color: #689d6a;
 }
 
@@ -58,20 +78,9 @@ window#waybar {
   color: #cc241d;
 }
 
-#battery {
-  margin: 0;
-  color: #458588;
-}
-
+/* Скругление только справа у последнего модуля (например, Часы) */
 #clock {
+  border-radius: 0 5px 5px 0;
+  margin-right: 5px;
   color: #b16286;
-}
-
-#tray {
-  margin: 0;
-  color: #d65d0e;
-}
-
-#battery, #backlight,#custom-play,#pulseaudio,#clock{
-  padding: 0 5px;
 }
