@@ -4,12 +4,7 @@
 
 Скопировать .dotfiles в home перейти в каталог и запустить 'stow .'
 
-- Для добавления снапшотов в grub
-```
-sudo systemctl edit --full grub-btrfsd
-ExecStart=/usr/bin/grub-btrfsd --syslog --timeshift-auto
-```
-
+- настройка с помощью скриптов python работает криво 
 
 - [x] Auto Settings post install (on any system)
   - [x] Install pkgs (and aur)
